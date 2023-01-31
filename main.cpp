@@ -1,19 +1,18 @@
-#include <SFML/Graphics.hpp>
+#include <iostream>
+#include <glm/glm.hpp>
 
-int main() {
-  sf::RenderWindow window(sf::VideoMode(200, 200), "SFML Works!");
+using namespace std;
 
-  while (window.isOpen()) {
-    sf:Event event;
-    while (window.pollEvent(event)) {
-      if (event.type == sf::Event::Closed) {
-        window.close();
-      }
+int main()
+{
+  //Varables
+  int number = 0;  
 
-      window.clear();
-      window.display();
-    }
-
-    return 0;
-  }
+  //Main Loop
+  glm::vec4 Position = glm::vec4(glm::vec3(0.0), 1.0);
+  glm::mat4 Model = glm::mat4(1.0);
+  Model[4] = glm::vec4(1.0, 1.0, 0.0, 1.0);
+  glm::vec4 Transformed = Model * Position;
+  
+  return 0;
 }
