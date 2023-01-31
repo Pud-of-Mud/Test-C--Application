@@ -1,4 +1,4 @@
-# Test-C--Application
+# Test C++ Application
 A Test C++ application for learning the programming language.
 
 ## What it does
